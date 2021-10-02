@@ -18,6 +18,11 @@ function App() {
               </div>
             )}
           })}
+          <select>
+            <option value="">Select a Topic</option>
+            <option value="User Interface">User Interface</option>
+            <option value="Git">Git</option>
+          </select>
           {/* <span>{questions[1].question}</span> */}
         </div>
 
