@@ -4,6 +4,7 @@ import questionsData from './data/questionsData';
 
 function App() {
   const [questions, setQuestions] = useState(questionsData);
+  const [topic, setTopic] = useState()
 
   return (
     <div className="App">
