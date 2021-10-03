@@ -1,6 +1,6 @@
 import React from 'react';
 import questionsData from '../../data/questionsData';
-import QuestionsCard from './QuestionsCard';
+import QuestionCard from './QuestionsCard';
 
 const Questions = ({topic}) => {
     return(
@@ -9,7 +9,7 @@ const Questions = ({topic}) => {
                 questionsData.map(question => {
                     if(question.topic === `${topic}`){
                         return(
-                            <QuestionsCard key={question.id} question={question}/>
+                            <QuestionCard key={question.id} question={question}/>
                     )}
                 })
             }

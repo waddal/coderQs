@@ -4,10 +4,8 @@ import questionsData from './data/questionsData';
 import useInput from './hooks/useInput';
 import Question from './components/Selectors/Questions';
 
-const allQuestions = [...questionsData]
-
 function App() {
-  const [questions, setQuestions] = useState(allQuestions);
+  const [questions, setQuestions] = useState(questionsData);
   const [topic, setTopic, handleChange] = useInput();
   const [answer, setAnswer] = useState(false);
 

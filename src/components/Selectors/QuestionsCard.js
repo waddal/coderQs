@@ -1,12 +1,13 @@
 import React from 'react'
 
-const QuestionsCard = ({question}) => {
+const QuestionCard = ({question}) => {
     return (
-        <div>
+        <div className="QuestionCard">
             <span>{question.question}</span>
+            <hr/>
             <span>{question.answer}</span>
         </div>
     )
 }
 
-export default QuestionsCard;
+export default QuestionCard;
