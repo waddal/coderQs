@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import './App.css';
+import React, { useState } from 'react';
 import questionsData from './data/questionsData';
 import useInput from './hooks/useInput';
 
@@ -10,14 +10,11 @@ function App() {
   const [topic, setTopic, handleChange] = useInput();
   const [answer, setAnswer] = useState(false);
 
-  // useEffect(() => {
-  //   console.log("useEffect: ", topic)
-  //   console.log("useEffect: ", allQuestions)
-  // }, [topic])
-
   return (
     <div className="App">
         <h1>CoderQs</h1>
+
+{/* QUESTION COMPONENT */}
         <div>
           {questions.map(q => {
             if(q.topic === `${topic}`){
@@ -27,7 +24,10 @@ function App() {
                 <span>{q.answer}</span>
               </div>
             )}
-          })}
+          })};
+{/* QUESTION COMPONENT */}
+
+{/* TOPIC COMPONENT */}
           <select name="topic" value={questions.topic} onChange={handleChange}>
             <option value="">Select a Topic</option>
             <option value="User Interface">User Interface</option>
@@ -37,9 +37,10 @@ function App() {
             <option value="Applied Javascript">Applied Javascript</option>
             <option value="React">React</option>
             <option value="Advanced React">Advanced React</option>
-            {/* <option value="React">React</option> */}
           </select>
+{/* TOPIC COMPONENT */}
 
+{/* ANSWER COMPONENT */}
           <div>
             <label>
               <input 
@@ -50,6 +51,7 @@ function App() {
             </label>
           </div>
         </div>
+{/* ANSWER COMPONENT */}
 
     </div>
   );
