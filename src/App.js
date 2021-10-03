@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import questionsData from './data/questionsData';
 import useInput from './hooks/useInput';
+import Question from './components/Selectors/Questions';
 
 const allQuestions = [...questionsData]
 
@@ -16,7 +17,7 @@ function App() {
 
 {/* QUESTION COMPONENT */}
         <div>
-          {questions.map(q => {
+          {/* {questions.map(q => {
             if(q.topic === `${topic}`){
               return(
               <div key={q.id}>
@@ -24,7 +25,8 @@ function App() {
                 <span>{q.answer}</span>
               </div>
             )}
-          })};
+          })} */}
+          <Question topic={topic}/>
 {/* QUESTION COMPONENT */}
 
 {/* TOPIC COMPONENT */}
