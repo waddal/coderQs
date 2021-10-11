@@ -13,9 +13,9 @@ const QuestionList = () => {
             {
             questionsData.map(q => {
                 return (
-                    <div className="question">
+                    <div key={q.id} className="question">
                         <p>topic: {q.topic}</p>
-                        <h3 onClick={showAnswer}>q: {q.question}</h3>
+                        <h3 onClick={showAnswer(q.id)}>q: {q.question}</h3>
                         {
                             answer && <h3 onClick={showAnswer}>a: {q.answer}</h3>
                         }
