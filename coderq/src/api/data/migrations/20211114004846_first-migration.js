@@ -1,5 +1,9 @@
 exports.up = async (knex) => {
     await knex.schema
+      .createTable('answers', (table) => {
+        table.increments('answer_id')
+        table.string('answer', 512).notNullable()
+      })
       .createTable('questions', (table) => {
         table.increments('question_id')
         table.string('question', 200).notNullable()
@@ -10,13 +14,11 @@ exports.up = async (knex) => {
              .onDelete("RESTRICT")
              .onUpdate("RESTRICT");
       })
-      .createTable('answers', (table) => {
-        table.increments('answer_id')
-        table.string('answer', 512).notNullable()
-      })
   }
   
   exports.down = async (knex) => {
-    await knex.schema.dropTableIfExists('questions')
+    await knex.schema
+      .dropTableIfExists('questions')
+      .dropTableIfExists('answers')
   }
   
