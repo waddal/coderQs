@@ -4,9 +4,19 @@ exports.up = async (knex) => {
         table.increments('answer_id')
         table.string('answer', 512).notNullable()
       })
+      .createTable('topics', (table) => {
+        table.increments('topic_id')
+        table.string('topic_name')
+      })
       .createTable('questions', (table) => {
         table.increments('question_id')
         table.string('question', 200).notNullable()
+        table.integer('topic_id')
+             .unsigned()
+             .notNullable()
+             .references('topic_id').inTable('topics')
+             .onDelete("RESTRICT")
+             .onUpdate("RESTRICT");
         table.integer('answer_id')
              .unsigned()
              .notNullable()
@@ -19,6 +29,7 @@ exports.up = async (knex) => {
   exports.down = async (knex) => {
     await knex.schema
       .dropTableIfExists('questions')
+      .dropTableIfExists('topics')
       .dropTableIfExists('answers')
   }
   
