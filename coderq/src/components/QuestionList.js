@@ -4,7 +4,9 @@ import questionsData from '../database/questionsData';
 const QuestionList = () => {
     const [answer, setAnswer] = useState(false);
 
-    const showAnswer = () => {
+    const showAnswer = (id) => {
+        // if(id === )
+        console.log(id);
         setAnswer(!answer);
     }
 
@@ -15,7 +17,7 @@ const QuestionList = () => {
                 return (
                     <div key={q.id} className="question">
                         <p>topic: {q.topic}</p>
-                        <h3 onClick={showAnswer}>q: {q.question}</h3>
+                        <h3 onClick={showAnswer(q.id)}>q: {q.question}</h3>
                         {
                             answer && <h3 onClick={showAnswer}>a: {q.answer}</h3>
                         }
