@@ -2,8 +2,8 @@ const questionsData = [
     {
         id: 0,
         topic: "IDK",
-        question: "where the hell did all my work go?",
-        answer: "into a black hole",
+        question: "why did all of my initial questionsData values vanish?",
+        answer: "tell me, please",
     },
     {
         id: 1,

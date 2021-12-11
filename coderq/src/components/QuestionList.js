@@ -10,7 +10,7 @@ const QuestionList = () => {
 
     return (
         <>
-            {
+            {/* {
             questionsData.map(q => {
                 return (
                     <div key={q.id} className="question">
@@ -23,7 +23,11 @@ const QuestionList = () => {
                     </div>
                 )
             })
-            }
+            } */}
+            <div>
+                <h1>Questions</h1>
+                
+            </div>
         </>
     )
 }
