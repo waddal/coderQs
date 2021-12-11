@@ -9,13 +9,13 @@ const questionsData = [
         id: 1,
         topic: "HTML",
         question: "What is semtantic HTML?",
-        answer: "",
+        answer: "Element tags that are meaningful.",
     },
     {
         id: 2,
         topic: "CSS",
         question: "Name two big differences between display: block; and display:inline?",
-        answer: "",
+        answer: "display: block doesn't like neighbors. inline keeps to itself, and is happy with others around.",
     },
     {
         id: 3,
@@ -27,13 +27,13 @@ const questionsData = [
         id: 4,
         topic: "CSS",
         question: "While using flexbox, what axis does `align-items: center` work on?",
-        answer: "",
+        answer: "the main axis",
     },
     {
         id: 5,
         topic: "Git",
         question: "Why is git valuable to a team of developers?",
-        answer: "",
+        answer: "repos are in the cloud, and easily accessed by multiple members",
     },
     {
         id: 6,
