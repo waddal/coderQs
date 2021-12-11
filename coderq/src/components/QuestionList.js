@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import questionsData from '../database/questionsData';
+import questionsData from '../api/data/questionsData';
 
 const QuestionList = () => {
     const [answer, setAnswer] = useState(false);
 
     const showAnswer = (id) => {
-        // if(id === )
-        console.log(id);
         setAnswer(!answer);
     }
 
