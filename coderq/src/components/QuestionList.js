@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import questionsData from '../api/data/questionsData';
+import Question from './Question';
 
 const QuestionList = () => {
     const [answer, setAnswer] = useState(false);
@@ -26,7 +27,13 @@ const QuestionList = () => {
             } */}
             <div>
                 <h1>Questions</h1>
-                
+                {
+                    questionsData.map(q => {
+                        return(
+                            <Question key={q.id} questionsData={q} answer={answer} showAnswer={showAnswer}/>
+                        )
+                    })
+                }
             </div>
         </>
     )
