@@ -1,20 +1,16 @@
-import React from 'react'
+import React from "react";
 
 const Question = (props) => {
-    const { questionsData, showAnswer, selected } = props;
+  const { questionsData, showAnswer, selected } = props;
 
-    return (
-        <div className="question" onClick={() => showAnswer(questionsData.id)}>
-            {/* QUESTION */}
-            <p>{questionsData.question}</p>
-            {/* ANSWER */}
-            {
-                selected === questionsData.id ? 
-                <p>{questionsData.answer}</p> : null
-            }
+  return (
+    <div className="question" onClick={() => showAnswer(questionsData.id)}>
+      {/* QUESTION */}
+      <p>{questionsData.question}</p>
+      {/* ANSWER */}
+      {selected === questionsData.id ? <p>{questionsData.answer}</p> : null}
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default Question
+export default Question;
