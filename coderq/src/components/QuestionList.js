@@ -6,6 +6,8 @@ const QuestionList = () => {
   const [answer, setAnswer] = useState(false);
   const [selected, setSelected] = useState();
   const [topic, setTopic] = useState("");
+  //completed & show/hide completed?
+  //starred
 
   const showAnswer = (id) => {
     selected === id ? setSelected(null) : setSelected(id);
