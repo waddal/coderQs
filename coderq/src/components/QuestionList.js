@@ -31,6 +31,10 @@ const QuestionList = () => {
                 <option value="HTML">HTML</option>
             </select>
         </div>
+        <div className="questionsDiv">
+
+        
+
         {questionsData
           .filter((t) => t.topic === topic)
           .map((q) => {
@@ -44,6 +48,7 @@ const QuestionList = () => {
               />
             );
           })}
+      </div>
       </div>
     </>
   );
