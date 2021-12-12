@@ -1,4 +1,6 @@
 .App {
+  display:flex;
+  flex-direction:column;
   text-align: center;
 }
 
@@ -13,6 +15,19 @@
   color: white;
 }
 
-.question {
+.QuestionsList {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.questionContainer {
+  height: auto;
+  width:250px;
   background-color:beige;
+}
+.question {
+  background-color: cornsilk;
+}
+.answer {
+  background-color: blanchedalmond;
 }

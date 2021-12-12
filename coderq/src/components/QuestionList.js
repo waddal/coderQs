@@ -21,13 +21,16 @@ const QuestionList = () => {
 
   return (
     <>
-      <div>
+      <div className="QuestionsList">
         <h1>Questions</h1>
-        <select value={topic} name="topics" id="topics" onChange={onChange}>
-          <option value=""></option>
-          <option value="JS">JS</option>
-          <option value="CSS">CSS</option>
-        </select>
+        <div className="topicSelect">
+            <select value={topic} name="topics" id="topics" onChange={onChange}>
+                <option value=""></option>
+                <option value="JS">JS</option>
+                <option value="CSS">CSS</option>
+                <option value="HTML">HTML</option>
+            </select>
+        </div>
         {questionsData
           .filter((t) => t.topic === topic)
           .map((q) => {
@@ -41,34 +44,9 @@ const QuestionList = () => {
               />
             );
           })}
-        {/* {
-                    questionsData.map(q => {
-                        return(
-                            <Question 
-                                key={q.id} 
-                                questionsData={q} 
-                                answer={answer} 
-                                showAnswer={showAnswer}
-                                selected={selected}
-                                />
-                        )
-                    })
-                } */}
       </div>
     </>
   );
 };
 
 export default QuestionList;
-
-// const getClassName = id => {
-//     return id = id === activeSquare ? 'active' : '';
-//   };
-
-//   const markActive = id => {
-//     // This is a helper used inside an _inlined_ click handler (see below).
-//     // Set the id argument to become the active id in state
-//     // (unless it already is, in which case we should reset
-//     // the currently active square id back to initial state).
-//     activeSquare === id ? setActiveSquare(null) : setActiveSquare(id);
-//   };

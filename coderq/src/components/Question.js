@@ -4,11 +4,11 @@ const Question = (props) => {
   const { questionsData, showAnswer, selected } = props;
 
   return (
-    <div className="question" onClick={() => showAnswer(questionsData.id)}>
+    <div className="questionContainer" onClick={() => showAnswer(questionsData.id)}>
       {/* QUESTION */}
-      <p>{questionsData.question}</p>
+      <p className="question">{questionsData.question}</p>
       {/* ANSWER */}
-      {selected === questionsData.id ? <p>{questionsData.answer}</p> : null}
+      {selected === questionsData.id ? <p className="answer">{questionsData.answer}</p> : null}
     </div>
   );
 };
