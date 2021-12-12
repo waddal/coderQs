@@ -8,7 +8,7 @@ const QuestionList = () => {
     const [topic, setTopic] = useState("");
 
     const showAnswer = (id) => {
-        setSelected(id);
+        selected === id ? setSelected(null) : setSelected(id);
         setAnswer(!answer);
     }
 
@@ -17,7 +17,6 @@ const QuestionList = () => {
         setTopic(value);
     }
 
-    console.log(topic);
     return (
         <>
             <div>

@@ -4,9 +4,9 @@ const Question = (props) => {
     const { questionsData, showAnswer, selected } = props;
 
     return (
-        <div className="question">
+        <div className="question" onClick={() => showAnswer(questionsData.id)}>
             {/* QUESTION */}
-            <p onClick={() => showAnswer(questionsData.id)}>{questionsData.question}</p>
+            <p>{questionsData.question}</p>
             {/* ANSWER */}
             {
                 selected === questionsData.id ? 
