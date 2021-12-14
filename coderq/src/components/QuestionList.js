@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import questionsData from "../api/data/questionsData";
 import Question from "./Question";
 
-const QuestionList = () => {
+const QuestionList = (props) => {
+  const { onStar } = props;
   const [answer, setAnswer] = useState(false);
   const [selected, setSelected] = useState();
   const [topic, setTopic] = useState("");
@@ -42,6 +43,7 @@ const QuestionList = () => {
                   answer={answer}
                   showAnswer={showAnswer}
                   selected={selected}
+                  onStar={onStar}
                 />
               );
             })}
