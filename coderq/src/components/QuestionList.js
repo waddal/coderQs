@@ -24,31 +24,28 @@ const QuestionList = () => {
       <div className="QuestionsList">
         <h1>Questions</h1>
         <div className="topicSelect">
-            <select value={topic} name="topics" id="topics" onChange={onChange}>
-                <option value=""></option>
-                <option value="JS">JS</option>
-                <option value="CSS">CSS</option>
-                <option value="HTML">HTML</option>
-            </select>
+          <select value={topic} name="topics" id="topics" onChange={onChange}>
+            <option value=""></option>
+            <option value="JS">JS</option>
+            <option value="CSS">CSS</option>
+            <option value="HTML">HTML</option>
+          </select>
         </div>
         <div className="questionsDiv">
-
-        
-
-        {questionsData
-          .filter((t) => t.topic === topic)
-          .map((q) => {
-            return (
-              <Question
-                key={q.id}
-                questionsData={q}
-                answer={answer}
-                showAnswer={showAnswer}
-                selected={selected}
-              />
-            );
-          })}
-      </div>
+          {questionsData
+            .filter((t) => t.topic === topic)
+            .map((q) => {
+              return (
+                <Question
+                  key={q.id}
+                  questionsData={q}
+                  answer={answer}
+                  showAnswer={showAnswer}
+                  selected={selected}
+                />
+              );
+            })}
+        </div>
       </div>
     </>
   );
